@@ -1,3 +1,148 @@
+/* 반응형 적용 */
+/* pc */
+@media (min-width: 1024px) {
+    .container{
+        width: 768px;
+    }
+    nav > div {
+        top: 45px;
+    }
+    .nav_home_img{
+        width: 28px;
+    }
+    header {
+        padding: 45px 0;
+        font-size: 28px;
+    }
+    main {
+        padding: 45px 0;
+    }
+    footer > div > p {
+        padding: 30px;
+        font-size: 14px;
+    }
+    .home_main_section {
+        width: 65%;
+        height: 300px;
+    }    
+    .detail_main_section {
+        width: 65%;
+    }
+    .detail_main_section_title {
+        font-size: 32px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+}
+/* 태블릿 - 가로 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        width: 100%;
+    }
+    nav > div {
+        top: 40px;
+    }
+    .nav_home_img{
+        width: 26px;
+    }
+    header {
+        padding: 40px 0;
+        font-size: 26px;
+    }
+    main {
+        padding: 40px 0;
+    }
+    footer > div > p {
+        padding: 20px;
+        font-size: 14px;
+    }
+    .home_main_section {
+        width: 70%;
+        height: 300px;
+    }
+    .detail_main_section {
+        width: 70%;
+    }
+    .detail_main_section_title {
+        font-size: 26px;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+    
+}
+/* 태블릿 - 세로 */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container{
+        width: 100%;
+    }
+    nav > div {
+        top: 40px;
+    }
+    .nav_home_img{
+        width: 26px;
+    }
+    header {
+        padding: 40px 0;
+        font-size: 26px;
+    }
+    main {
+        padding: 40px 0;
+    }
+    footer > div > p {
+        padding: 15px;
+        font-size: 12px;
+    }
+    .home_main_section {
+        width: 80%;
+        height: 280px;
+    }
+    .detail_main_section {
+        width: 80%;
+    }
+    .detail_main_section_title {
+        font-size: 26px;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+    
+}
+/* 모바일 */
+@media (max-width: 479px) {
+    .container{
+        width: 100%;
+    }
+    nav > div {
+        top: 30px;
+    }
+    .nav_home_img{
+        width: 22px;
+    }
+    header {
+        padding: 30px 0;
+        font-size: 22px;
+    }
+    main {
+        padding: 30px 0;
+    }
+    footer > div > p {
+        padding: 10px;
+        font-size: 10px;
+    }
+    .home_main_section {
+        width: 90%;
+        height: 260px;
+    }
+    .detail_main_section {
+        width: 90%;
+    }
+    .detail_main_section_title {
+        font-size: 22px;
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+}
+
 /* home, bob, cafe 공통 css */
 @font-face {
     font-family: 'KakaoBigFont';
@@ -6,14 +151,14 @@
     font-display: swap;
 }
 
-        @font-face {
+@font-face {
     font-family: 'KakaoBigFont';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
 
-        @font-face {
+@font-face {
     font-family: 'KakaoBigFont';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-ExtraBold.woff2') format('woff2');
     font-weight: 800;
@@ -23,7 +168,6 @@
 * { box-sizing: border-box; padding: 0; margin: 0; }
 
 .container {
-    width: 768px;
     min-height: 100vh;      /* vh : 최소 높이가 뷰포터의 전체 높이 차지 */
     margin: 0 auto;
     position: relative;
@@ -31,7 +175,6 @@
 
 nav > div {
     position: absolute;
-    top: 45px;
     right: 30px;
 }
 
@@ -39,11 +182,9 @@ nav > div {
 header {
     background-color: #1591DC;
     color: #fff;
-    padding: 45px 0;
     text-align: center;
     font-family: "KakaoBigFont";
     font-weight: 800;
-    font-size: 28px;
     letter-spacing: 2px;
     word-spacing: 3px;
 }
@@ -55,7 +196,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 60px 0;
     font-family: "KakaoBigFont";
 }
 
@@ -63,24 +203,18 @@ main > section:hover {
     transform: scale(1.12);
 }
 
-
 /* footer */
 footer > div > p {
     background-color: #f3f3f3;
-    padding: 30px;
     color: #888;
-    font-size: 14px;
 }
 
 
 /* home 페이지 */
 .home_main_section {
-    width: 65%;
-    height: 300px;
     background-color: #fff;
     border-radius: 24px;
     box-shadow: 3px 3px 5px 0 gray;
-
     cursor: pointer;
     transition: transform 0.4s ease;
 
@@ -96,9 +230,6 @@ footer > div > p {
     padding: 20px;
 }
 
-.home_main_section_imgbox {
-    width: 150px;
-}
 
 .home_main_section_comment {
     padding: 20px;
@@ -107,8 +238,6 @@ footer > div > p {
 
 /* bob, cafe 페이지*/
 .detail_main_section {
-    width: 65%;
-    height: 800px;
     background-color: #fff;
     border-radius: 24px;
     box-shadow: 3px 3px 5px 0 gray;
@@ -123,8 +252,6 @@ footer > div > p {
 .detail_main_section_title {
     width: 100%;
     font-weight: 800;
-    font-size: 36px;
-    padding: 50px;
     background-color: #1591DC;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
@@ -134,17 +261,17 @@ footer > div > p {
     justify-content: center;
 }
 
-.detail_main_section_img {
-    height: 320px;
-    width: 320px;
-}
-
 main img {
     width: 100%;
     height: 100%;
     object-fit: fill;       /* 부모 크기에 꽉 차게 늘림(비율 유지x) */
     border-radius: 10%;
 }
+
+.detail_main_section_img {
+    height: 320px;
+    width: 320px;
+}   
 
 .detail_main_section_comment {
     line-height: 1.2;
@@ -157,12 +284,12 @@ main img {
 }
 
 .detail_main_section_link {
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 90%;
-            background-color: #C4E2F5;
-            border-radius: 20px;
-            margin-bottom: 25px;
-        }
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: #C4E2F5;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
